@@ -6,45 +6,52 @@
     <title>Bitácora Stephanie Ramírez</title>
     <link rel="icon" href="Recursos/img/logodelcolegio.png" style="image/png">
     <style>
-        html, body{
+        html, body {
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
         }
-        body{display: flex;
-        flex-direction: column; 
-        text-align: center;
-}
-header{
-    padding: 20px;
-    background-color: rgb(125, 102, 68);
-    color: rgb(245, 171, 129);
-}
-main{
-    flex: 1;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: beige;
-}
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    border-top: 1px solid white;
-    background-color: rgb(254, 245, 217);
-}
 
-.semana {
+        body {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background-color: rgb(125, 102, 68);
+            color: rgb(245, 171, 129);
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: beige;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-top: 1px solid white;
+            background-color: rgb(254, 245, 217);
+        }
+
+        .semana {
             background-color: white;
             border-radius: 15px;
             padding: 25px;
-            margin: 20px auto; 
-            max-width: 800px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 800px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             border-left: 8px solid rgb(125, 102, 68);
-            text-align: left; 
+            text-align: left;
             transition: transform 0.3s ease;
         }
 
@@ -57,31 +64,57 @@ footer{
             margin-top: 0;
         }
 
-footer img {
-    transition: transform 0.3s ease;
-}
+        .semana video,
+        .semana img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
 
-footer img:hover {
-    transform: scale(1.15);
-}
-@media (max-width: 600px;){
-    footer{
-        flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-}
-}
-header h1{
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow:
-    0 0 5px rgb(250, 225, 209),
-    0 0 10px rgb(249, 200, 169),
-    0 0 20px rgb(250, 172, 123),
-    0 0 40px rgb(255, 134, 59),
-    0 0 80px rgb(251, 96, 0);
-}
+        .semana video {
+            max-height: 500px;
+            object-fit: contain;
+            background-color: black;
+        }
+
+        footer img {
+            transition: transform 0.3s ease;
+        }
+
+        footer img:hover {
+            transform: scale(1.15);
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            .semana {
+                padding: 18px;
+            }
+        }
+
+        header h1 {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow:
+                0 0 5px rgb(250, 225, 209),
+                0 0 10px rgb(249, 200, 169),
+                0 0 20px rgb(250, 172, 123),
+                0 0 40px rgb(255, 134, 59),
+                0 0 80px rgb(251, 96, 0);
+        }
     </style>
 </head>
 <body>
@@ -98,7 +131,7 @@ header h1{
     <h2>Semana 2:introduccion a la Robotica</h2>
     <p>En esta parte del curso aprendimos a usar CSS para crear clases como esta (.semana) y dar un aspecto profesional a nuestra web.</p>
     <video controls class="video-bitacora">
-        <source src="recursos/introrobotica.mp4" type="video/mp4">
+        <source src="Recursos/introrobotica.mp4" type="video/mp4">
     </video>
 </div>
 
@@ -106,7 +139,7 @@ header h1{
 <div class="semana">
     <h2>Semana 3: Circuito prueba</h2>
     <p>En esta sesión se observa el desarrollo y funcionamiento del circuito de prueba.</p>
-    <img src="recursos/unled.jpg" alt="Circuito un led" class="imagen-circuito">
+    <img src="Recursos/unled.jpg" alt="Circuito un led" class="imagen-circuito">
     <video controls>
         <source src="Recursos/aaa3.mp4" type="video/mp4">
     </video>
@@ -124,7 +157,7 @@ header h1{
     <h2>Semana 5</h2>
     <p>En esta sesión se observa el circuito RGB funcionando físicamente y mostrando colores distintos al rojo, azul y verde.</p>
     <video controls>
-        <source src="circuito5.mp4" type="video/mp4">
+        <source src="Recursos/circuito5.mp4" type="video/mp4">
     </video>
 </div>
 
